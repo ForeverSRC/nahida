@@ -1,0 +1,46 @@
+version: "3.5"
+services:
+  mongo-rs0:
+    image: mongo:5.0.9
+    container_name: mongo-rs0
+    restart: always
+    ports:
+      - "27017:27017"
+    command:
+      - mongod
+      - --bind_ip
+      - 0.0.0.0
+      - --replSet
+      - mdbDefGuide
+      - --port
+      - '27017'
+
+  mongo-rs1:
+    image: mongo:5.0.9
+    container_name: mongo-rs1
+    restart: always
+    ports:
+      - "27018:27018"
+    command:
+      - mongod
+      - --bind_ip
+      - 0.0.0.0
+      - --replSet
+      - mdbDefGuide
+      - --port
+      - '27018'
+
+  mongo-rs2:
+    image: mongo:5.0.9
+    container_name: mongo-rs2
+    restart: always
+    ports:
+      - "27019:27019"
+    command:
+      - mongod
+      - --bind_ip
+      - 0.0.0.0
+      - --replSet
+      - mdbDefGuide
+      - --port
+      - '27019'

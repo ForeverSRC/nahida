@@ -1,8 +1,8 @@
 version: "3.5"
 services:
-  mongo:
-    image: mongo:5.0.9
-    container_name: mongo
+  mongo-single:
+    image: mongo:latest
+    container_name: mongo-single
     restart: always
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root

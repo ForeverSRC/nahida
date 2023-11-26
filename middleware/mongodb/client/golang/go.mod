@@ -1,6 +1,6 @@
 module github.com/ForeverSRC/nahida/middleware/mongodb/client/golang
 
-go 1.20
+go 1.21
 
 require go.mongodb.org/mongo-driver v1.12.1
 
