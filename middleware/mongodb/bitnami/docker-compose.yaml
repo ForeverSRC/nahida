@@ -1,0 +1,13 @@
+﻿version: "3.5"
+services:
+  mongo-single:
+    image: bitnami/mongodb:6.0
+    container_name: mongo-bitnami-single
+    restart: always
+    environment:
+      - MONGODB_ROOT_PASSWORD=aaa1234
+    volumes:
+      -  .data:/bitnami/mongodb
+    ports:
+      - "27017:27017"
+
